@@ -33,11 +33,11 @@ const Withdraw = props => {
         const confirmed = await result.wait(1)
 
         if (confirmed) {
-          setBuyLoading(false)
+          setWithdrawLoading(false)
           setWithdrawModal(false)
         }
       } else {
-        setBuyLoading(false)
+        setWithdrawLoading(false)
       }
     }).catch(error => {
       console.log(error)
