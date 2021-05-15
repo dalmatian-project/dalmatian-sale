@@ -1,0 +1,130 @@
+.head-text {
+  padding-top: 30px;
+  text-align: center;
+  font-size: 80px;
+  font-family: 'Dokdo', cursive;
+}
+
+.sub-text {
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.desc-text {
+  text-align: center;
+  font-family: 'Jura', sans-serif;
+  font-size: 40px;
+}
+
+.modal-header-text {
+  font-family: 'Dokdo', cursive;
+  font-size: 35px;
+}
+
+.wallet-header-text {
+  font-family: 'Jura', sans-serif;
+  font-size: 24px;
+}
+
+.connecting-text {
+  font-family: 'Jura', sans-serif;
+  margin-bottom: 8px;
+}
+
+.cancel-btn {
+  font-family: 'Jura', sans-serif;
+}
+
+.wallet-name {
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  transition: all .3s ease;
+}
+
+.provider-link {
+  font-family: 'Jura', sans-serif;
+  text-align: center;
+  margin-top: 24px;
+  padding-bottom: 12px;
+
+  a {
+    text-decoration: none;
+    color: #222;
+  }
+}
+
+.error-title {
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.error-secondary {
+  font-family: 'Jura', sans-serif;
+  text-align: center;
+}
+
+.error-btn {
+  font-family: 'Jura', sans-serif;
+}
+
+.connected-icon {
+  font-family: 'Jura', sans-serif;
+}
+
+span {
+  font-family: 'Jura', sans-serif !important;
+}
+
+.connected-label {
+  font-family: 'Jura', sans-serif;
+}
+
+.disconnect-btn {
+  font-family: 'Jura', sans-serif;
+}
+
+.Toastify {
+  * {
+    font-family: 'Jura', sans-serif !important;
+  }
+}
+
+.modal-body {
+  font-family: 'Jura', sans-serif;
+}
+
+.main-header {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dot {
+  text-align: center;
+  font-size: 30px;
+}
+
+.roadmap-text {
+  margin-top: 50px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.buy-btn,
+.withdraw-btn {
+  font-family: 'Jura', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.app,
+.transaction,
+.withdraw {
+  font-family: 'Jura', sans-serif;
+}

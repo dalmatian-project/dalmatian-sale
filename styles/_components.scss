@@ -1,0 +1,454 @@
+.connect-btn {
+  padding: 8px 12px;
+  font-family: 'Jura', sans-serif;
+  font-weight: bold;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: #222;
+    color: #fff;
+  }
+
+  & > div {
+    margin-right: 12px;
+  }  
+}
+
+.wallet-item {
+  padding: 8px 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0;
+  border: 1px solid #eee;
+  background-color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .3s ease;
+
+  .wallet-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-right: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:hover {
+    background-color: #222;
+
+    .wallet-name {
+      color: #fff;
+    }
+  }
+}
+
+.app {
+  width: 940px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+
+  .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: 999;
+
+    .pending-text {
+      margin-top: 24px;
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .app-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .app-header-text {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .app-close {
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover {
+        color:rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  .app-body {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+      width: 50%;
+      padding: 15px;
+    }
+
+    .input-wrap {
+      margin-top: 12px;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+
+      .input-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 12px;
+
+        input {
+          margin-left: 12px;
+          margin-right: 12px;
+          flex: 1;
+          font-size: 24px;
+          font-family: 'Jura', sans-serif;
+          border: none;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+  
+      .balance {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+
+        & > div {
+          margin-left: 8px;
+
+          &.balance-number {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .deposit-btn {
+      margin-top: 24px;
+      padding: 8px 12px;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all .3s ease;
+      text-align: center;
+
+      &:hover {
+        background-color: #222;
+        color: #fff;
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        background-color: #eee;
+
+        &:hover {
+          background-color: #eee;
+          color: #000;
+        }
+      }
+    }
+
+    .round-text {
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+
+    .info-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+
+      .info-value {
+        font-weight: bold;
+
+        span {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+.transaction {
+  width: 950px;
+  height: 80vh;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+
+  .transaction-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .transaction-header-text {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .transaction-close {
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover {
+        color:rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  .transaction-body {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+
+    & > div {
+      width: 50%;
+      padding: 0 8px;
+
+      .title-text {
+        padding-bottom: 8px;
+        border-bottom: 1px solid #eee;
+      }
+
+      .list-wrap {
+        height: calc(80vh - 170px);
+        padding: 15px 0;
+        overflow-y: auto;
+
+        .list-item {
+          margin: 24px 0;
+  
+          .transaction-id {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 4px;
+  
+            .event {
+              font-size: 10px;
+              font-weight: bold;
+              padding: 4px;
+              background-color: rgba(0, 0, 0, .5);
+              display: inline-block;
+              color: #fff;
+              border-radius: 3px;
+              margin-right: 12px;
+  
+              &.green {
+                background-color: #32a852;
+              }
+  
+              &.blue {
+                background-color: #2891b8;
+              }
+            }
+  
+            .transaction-link {
+              a {
+                color: #222;
+                transition: all .3s ease;
+    
+                &:hover {
+                  color: #8a28b8
+                }
+              }
+            }
+          }
+  
+          .values {
+            font-size: 0.9rem;
+            margin-bottom: 4px;
+            span {
+              font-weight: bold;
+            }
+          }
+  
+          &:first-child {
+            margin-top: 0;
+          }
+        }
+  
+        .no-transaction {
+          width: 100%;
+          height: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 8
+        }
+      }
+    }
+  }
+
+  .events-link {
+    text-align: center;
+    
+    a {
+      color: #222;
+      transition: all .3s ease;
+
+      &:hover {
+        color: #8a28b8
+      }
+    }
+  }
+}
+
+.withdraw {
+  width: 500px;
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  position: relative;
+
+  .loading {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .7);
+    top: 0;
+    left: 0;
+    border-radius: 15px;
+    z-index: 999;
+
+    .pending-text {
+      margin-top: 24px;
+      font-size: 24px;
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+
+  .withdraw-header {
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .withdraw-header-text {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .withdraw-close {
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover {
+        color:rgba(0, 0, 0, .5);
+      }
+    }
+  }
+
+  .withdraw-body {
+    margin-top: 15px;
+
+    .notice-title {
+      color: #ff1500;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .notice-desc {
+      color: #ff1500;
+      margin-bottom: 8px;
+    }
+
+    .copy-address {
+      padding: 12px 0;
+
+      .token-address {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+  
+        .contract {
+          margin-right: 8px;
+        }
+      }
+    }
+
+    .withdraw-wrap {
+      margin-top: 24px;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 12px;
+
+      .amount-value {
+        text-align: right;
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      .withdrawl-btn {
+        margin-top: 24px;
+        padding: 8px 12px;
+        border: 1px solid #eee;
+        border-radius: 8px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all .3s ease;
+        text-align: center;
+  
+        &:hover {
+          background-color: #222;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
